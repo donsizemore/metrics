@@ -53,5 +53,6 @@ def process_distro(distro_list):
 # do work
 get_distros(distro_dir)
 of = open(output,'w+')
+of.write('distro,hits\n')
 process_distro(distro_list)
 of.close()

@@ -30,5 +30,6 @@ def du_dir(distro_list):
 # do work
 read_dir(distro_dir)
 of = open(output,'w+')
+of.write('distro,size\n')
 du_dir(distro_list)
 of.close()  
