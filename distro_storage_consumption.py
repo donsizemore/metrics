@@ -23,7 +23,7 @@ def read_dir(distro_dir):
 # calculate sizes
 def du_dir(distro_list):
   for dir in distro_list:
-    size = subprocess.check_output(['du','-sh', dir]).split()[0].decode('utf-8')
+    size = subprocess.check_output(['du','-sm', dir]).split()[0].decode('utf-8')
     distro = dir.split('/')[3]
     of.write(distro + ',' + size + '\n')
 
